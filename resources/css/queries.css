@@ -17,11 +17,22 @@
         margin: 0 0 4px 0;
     }
     
+    footer .col{width: 40%;}
+
     /* Small phones: from 0 to 480px */
 @media only screen and (max-width: 480px) {
     section { padding: 25px 0; }
 
+    .navbar ul li{padding-left: 8px}
+
+    .col { 
+        width: 100%;
+        margin: 0 0 4px 0;
+    }
+
+    footer .col{width: 40%;}
+
     .footer-nav li,
     .social-links li{
-            display: block;
+        display: inline-block;   
     }

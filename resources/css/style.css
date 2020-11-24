@@ -133,9 +133,12 @@ input[type=submit]:active {
 
 /* ----- HEADER----- */
 
+
 .navbar {
   padding: 10px 16px;
   color: #f1f1f1;
+  position: relative;
+  
 }
 
 .navbar ul{
@@ -160,21 +163,6 @@ header {
     padding-bottom: 15px;
     background-color: #525f7f;
     height: 100vh;
-    z-index: -999;
-
-}
-
-.hero-box {
-    max-width: 60%;
-
-}
-
-.hero-pic {
-    width: 80%;
-    height: 80vh;
-    border-radius: 20px;
-    float: left;
-    padding-left: 20%;
 }
 
 .hero-text {
@@ -186,7 +174,6 @@ header {
 
 .hero-text span{color: #e14eca}
 
-
 .page-header .category-absolute {
     position: absolute;
     top: 100vh;
@@ -194,7 +181,6 @@ header {
     padding: 0 15px;
     width: 100%;
     color: rgba(255, 255, 255, 0.5);
-    
 }
 
 .squares {
