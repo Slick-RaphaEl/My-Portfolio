@@ -1,3 +1,18 @@
+//TTPEWRITER ANIMATION
+let i = 0;
+let txt = "Here is a piece of what i am capable of.";
+let speed = 150;
+
+const typewriter = () => {
+  if (i < txt.length) {
+    document.getElementById("textp").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typewriter, speed);
+  }
+}
+
+typewriter();
+
 // sticky header
 window.onscroll = function() {addStickyHeader()};
 
@@ -14,10 +29,7 @@ const addStickyHeader = () => {
 
 // QUOTES SLIDES
 let slide_index = 1;  
-
-
 let nextSlide = (n) => {displaySlides(slide_index += n); }
-
 let currentSlide = (n) => {displaySlides(slide_index = n);}  
 
 const displaySlides = (n) => {  
@@ -47,4 +59,4 @@ fetch(url)
 });
 
 
-  
+  console.log("read");
