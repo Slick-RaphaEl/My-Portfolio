@@ -23,7 +23,7 @@
 @media only screen and (max-width: 480px) {
     section { padding: 25px 0; }
 
-    .navbar ul li{padding-left: 8px}
+    .navbar ul li{padding-left: 4px}
 
     .col { 
         width: 100%;
