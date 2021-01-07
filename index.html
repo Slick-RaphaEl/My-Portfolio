@@ -4,9 +4,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
-        <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
         <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
         <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
@@ -61,54 +61,49 @@
                     <div class="overview-box clearfix">
                         <h3>skills</h3>
                         <div>
-                            <ul>
-                                <li>HTML
-                                    <div class="container">
-                                        <div class="skills html">90%</div>
+                            <ul class="skills-list">
+                                <div>
+                                    <div class="col span-1-of-2">
+                                        <li><ion-icon name="logo-html5" class="icon-big"></ion-icon></li>
                                     </div>
-                                </li>
-                                <li>CSS
-                                    <div class="container">
-                                        <div class="skills css">70%</div>
+                                    
+                                    <div class="col span-1-of-2">
+                                        <li><ion-icon name="logo-css3" class="icon-big"></ion-icon></li>
                                     </div>
-                                </li>
-                                <li>VANILLA JAVASCRIPT
-                                    <div class="container">
-                                        <div class="skills js">65%</div>
+                                </div>
+                                
+                                <div>
+                                    <div class="col span-1-of-2">
+                                        <li><ion-icon name="logo-javascript" class="icon-big"></ion-icon></li>
                                     </div>
-                                </li>
-                                <li>REACT JS
-                                    <div class="container">
-                                        <div class="skills react">70%</div>
+    
+                                    <div class="col span-1-of-2">
+                                        <li><ion-icon name="logo-react" class="icon-big"></ion-icon></li>
                                     </div>
-                                </li>
-                                <li>MOB APP DEV
-                                    <div class="container">
-                                        <div class="skills mob-app">65%</div>
+    
+                                </div>
+                                
+                                <div>
+                                    <div class="col span-1-of-2">
+                                        <li><ion-icon name="logo-nodejs" class="icon-big"></ion-icon></li>
                                     </div>
-                                </li>
-                                <li>EXPRESS
-                                    <div class="container">
-                                        <div class="skills express">70%</div>
+    
+                                    <div class="col span-1-of-2">
+                                        <li><ion-icon name="clipboard" class="icon-big"></ion-icon></li>
                                     </div>
-                                </li>
-                                <li>SQL
-                                    <div class="container">
-                                        <div class="skills sql">90%</div>
+                                </div>
+                                
+                                <div>
+                                    <div class="col span-1-of-2">
+                                        <li><ion-icon name="save" class="icon-big"></ion-icon></li>
                                     </div>
-                                </li>
-                                <li>GRAPHICS DESIGN
-                                    <div class="container">
-                                        <div class="skills gd">80%</div>
+    
+                                    <div class="col span-1-of-2">
+                                        <li><ion-icon name="pencil" class="icon-big"></ion-icon></li>
                                     </div>
-                                </li>
-                                <li>COPY WRITING
-                                    <div class="container">
-                                        <div class="skills copy-writing">90%</div>
-                                    </div>
-                                </li>
-                            
-                            
+                                </div>
+                               
+                               
                                 </ul>
                          </div>
                   
@@ -116,7 +111,7 @@
                 </div>
             
                 <div class="col span-1-of-2 box">
-                    <div class="overview-box">
+                    <div class="overview-box animate_animated animate_bounce">
                         <h3>Education</h3>
                         <ul>
                             <li>
@@ -214,62 +209,65 @@
         </section>
 
         <section id="quotes-section">
-             <h2>some quotes i find interesting</h2>
-           <div class="slidercontainer">  
-                <div class="showSlide fade">  
-                    <p>
-                    Not everything that is faced can be changed but nothing can be changed until it is faced<br> 
-                    <span>&#126;James Baldwin&#126;</span>
-                    </p> 
+            <h2>some quotes i find interesting</h2>
+                <div class="slidercontainer">  
+                    <div class="showSlide fade">  
+                        <p>
+                        Not everything that is faced can be changed but nothing can be changed until it is faced<br> 
+                        <span>&#126;James Baldwin&#126;</span>
+                        </p> 
+                    </div>  
+                    <div class="showSlide fade">  
+                        <p>
+                        You have not converted a man because you have silenced him<br> 
+                        <span>&#126;John Morley&#126;</span>
+                        </p> 
+                    </div>  
+    
+                    <div class="showSlide fade">  
+                        <p>
+                        Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth.<br> 
+                        <span>&#126;Marcus Aurelius&#126;</span>
+                        </p>  
+                    </div>  
+                    <div class="showSlide fade">  
+                        <p>
+                        We are social animals, hell is other people.<br> 
+                        <span>&#126;Black Swan&#126;</span>
+                        </p>  
+                        </div>  
+                    <!-- Navigation arrows -->  
+                    <a class="left" onclick="nextSlide(-1)">❮</a>  
+                    <a class="right" onclick="nextSlide(1)">❯</a>  
                 </div>  
-                <div class="showSlide fade">  
-                    <p>
-                    You have not converted a man because you have silenced him<br> 
-                    <span>&#126;John Morley&#126;</span>
-                    </p> 
-                </div>  
-  
-                <div class="showSlide fade">  
-                    <p>
-                    Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth.<br> 
-                    <span>&#126;Marcus Aurelius&#126;</span>
-                    </p>  
-                </div>  
-                <div class="showSlide fade">  
-                    <p>
-                    We are social animals, hell is other people.<br> 
-                    <span>&#126;Black Swan&#126;</span>
-                    </p>  
-                </div>  
-        <!-- Navigation arrows -->  
-        <a class="left" onclick="nextSlide(-1)">❮</a>  
-        <a class="right" onclick="nextSlide(1)">❯</a>  
-    </div>  
-            
         </section>
 
-        <section id="section-form" class="clearfix">
-            <!-- youtube  --> 
-            <div class="col span-1-of-2">
-                <div class="video-box">
-                    <h3 class="">Random Programming Video</h3>
-                       <div class="write-container">
-                           <iframe width="100%" height="370px" class="youtubeVideo"></iframe>
-                
-                        </div>
-                </div>
-            </div>
+        <section>
+             <!-- youtube  --> 
+           
+             <div class="video-box">
+                <h3 class="">Random Programming Video</h3>
+                   <div class="write-container">
+                       <iframe width="100%" height="370px" class="youtubeVideo"></iframe>
             
-          
-            <div class="col span-1-of-2 form-card">
-                    <div class="row">
-                        <h3>Happy to hear from you</h3>
                     </div>
+            </div>
+
+        </section>
+           
+            
+            
+        <section id="section-form" class="clearfix">
+            <div class="row">
+                <h2>Happy to hear from you</h2>
+            </div>
+            <div class="col span-3-of-4 form-card">
+                    
                     <div class="row">
-                        <form method="post" action="contact.php" class="contact-form">
+                        <form method="post" action="send" id="contact-form" enctype="multipart/form-data">
                             <div class="row">
                                 <div class="col span-1-of-3">
-                                    <label for="sendrName">Name</label>
+                                    <label for="senderName">Name</label>
                                 </div>
                                 <div class="col span-2-of-3">
                                     <input type="text" name="senderName" id="name" placeholder="Your name" required>
@@ -317,6 +315,7 @@
                         </form>
                 </div>
             </div>
+          
         </section>
             
         <footer>
@@ -338,7 +337,7 @@
 
         </footer>
                     
-       
+        <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
         <script src="resources/js/script.js"></script>
 
         </body>

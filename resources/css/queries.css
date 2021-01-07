@@ -30,6 +30,11 @@
         margin: 0 0 4px 0;
     }
 
+    .skills-list li{
+        display: inline;
+        font-size: 70%;
+        background-color: rgb(192, 38, 38);
+    }
     footer .col{width: 40%;}
 
     .footer-nav li,
