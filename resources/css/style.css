@@ -484,7 +484,7 @@ header {
 /* ----------------------------------------------- */
 
 #section-form{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/resources/img/form-banner.JPG);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/form-banner.JPG);
     background-attachment: fixed;
     background-size: cover;
     height: 80vh; 
