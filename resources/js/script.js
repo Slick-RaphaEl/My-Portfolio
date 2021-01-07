@@ -78,8 +78,6 @@ const formEvent = form.addEventListener("submit", (event) => {
 const sendMail = (mail) => {
   //1.
 
-  fetch("file:///C:/Users/ONYI/Documents/Tech%20Work/Web/test/index.html/send", {
-
   fetch("https://slick-raphael.github.io/My-Portfolio/send", {
 
     method: "post", //2.
