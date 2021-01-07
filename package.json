@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/Slick-RaphaEl/My-Portfolio#readme",
   "dependencies": {
+<<<<<<< HEAD
     "animate.css": "^4.1.1",
+=======
+>>>>>>> 990bd53d7fbfc8ba94414f40b93d0c4806e9b5a8
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "multiparty": "^4.2.2",

@@ -61,7 +61,11 @@ fetch(url)
 
   console.log("read");
 
+<<<<<<< HEAD
   //get the form by its id
+=======
+//get the form by its id
+>>>>>>> 990bd53d7fbfc8ba94414f40b93d0c4806e9b5a8
 const form = document.getElementById("contact-form"); 
 
 //1.
@@ -77,7 +81,11 @@ const formEvent = form.addEventListener("submit", (event) => {
 
 const sendMail = (mail) => {
   //1.
+<<<<<<< HEAD
   fetch("file:///C:/Users/ONYI/Documents/Tech%20Work/Web/test/index.html/send", {
+=======
+  fetch("https://slick-raphael.github.io/My-Portfolio/send", {
+>>>>>>> 990bd53d7fbfc8ba94414f40b93d0c4806e9b5a8
     method: "post", //2.
     body: mail, //3.
 
