@@ -17,6 +17,7 @@ typewriter();
 window.onscroll = function() {addStickyHeader()};
 
 const header = document.getElementById("myHeader");
+
 const sticky = header.offsetTop;
 
 const addStickyHeader = () => {
@@ -59,37 +60,56 @@ fetch(url)
 });
 
 
-  console.log("read");
+  
 
-<<<<<<< HEAD
-  //get the form by its id
-=======
-//get the form by its id
->>>>>>> 990bd53d7fbfc8ba94414f40b93d0c4806e9b5a8
-const form = document.getElementById("contact-form"); 
 
-//1.
-const formEvent = form.addEventListener("submit", (event) => {
-  event.preventDefault();
+// //get the form by its id
 
-  //2.
-  let mail = new FormData(form);
+// const form = document.getElementById("contact-form"); 
 
-  //3.
-  sendMail(mail);
-})
+// //1.
+// const formEvent = form.addEventListener("submit", (event) => {
+//   event.preventDefault();
 
-const sendMail = (mail) => {
-  //1.
-<<<<<<< HEAD
-  fetch("file:///C:/Users/ONYI/Documents/Tech%20Work/Web/test/index.html/send", {
-=======
-  fetch("https://slick-raphael.github.io/My-Portfolio/send", {
->>>>>>> 990bd53d7fbfc8ba94414f40b93d0c4806e9b5a8
-    method: "post", //2.
-    body: mail, //3.
+//   //2.
+//   let mail = new FormData(form);
 
-  }).then((response) => {
-    return response.json();
+//   //3.
+//   sendMail(mail);
+// })
+
+// const sendMail = (mail) => {
+//   //1.
+
+//   fetch("https://slick-raphael.github.io/My-Portfolio/send", {
+
+//     method: "post", //2.
+//     body: mail, //3.
+
+//   }).then((response) => {
+//     return response.json();
+//   });
+// };
+
+$(document).ready(function() {
+
+  /* Mobile navigation */
+  $('.js--nav-icon').click(function() {
+    var nav = $('.js--main-nav');
+    var icon = $('.js--nav-icon i');
+    
+    nav.slideToggle(200);
+    
+    if (icon.hasClass('ion-navicon-round')) {
+        icon.addClass('ion-close-round');
+        icon.removeClass('ion-navicon-round');
+    } else {
+        icon.addClass('ion-navicon-round');
+        icon.removeClass('ion-close-round');
+    }        
   });
-};
+
+});
+
+
+console.log("read");

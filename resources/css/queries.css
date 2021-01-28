@@ -17,6 +17,29 @@
         margin: 0 0 4px 0;
     }
     
+     
+    .navbar { display: none; }
+    .mobile-nav-icon {display: inline-block;}
+    
+    .navbar {
+        float: right;
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    
+    .navbar li {
+        display: block;
+        padding: 2px;
+    }
+    
+    .navbar li a:link,
+    .navbar li a:visited {
+        display: block;
+        border: 0;
+        padding: 10px 0;
+        font-size: 100%;
+    }
+
     footer .col{width: 40%;}
 
     /* Small phones: from 0 to 480px */

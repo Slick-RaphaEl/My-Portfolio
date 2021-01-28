@@ -147,20 +147,30 @@ header {
 }
 
 .navbar {
-  padding: 10px 16px;
   color: #f1f1f1;
   position: relative;
-  
-}
-
-.navbar ul{
     float: right;
     list-style: none;
 }
 
-.navbar ul li{
+.navbar li{
     display: inline-block;
     padding: 16px;
+}
+
+
+/* Mobile navi */
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+    position: relative;
+}
+
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #fff;
 }
 
 .sticky {
@@ -487,7 +497,7 @@ header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/resources/img/form-banner.JPG);
     background-attachment: fixed;
     background-size: cover;
-    height: 80vh; 
+    
 }
 
 .form-card{
@@ -495,8 +505,9 @@ header {
     border-radius: 40px;
 }
 
-#section-form h3{
+#section-form h2{
     padding: 10px 25%;
+    color: #fff;
 
 }
 
@@ -505,7 +516,7 @@ header {
     margin: 0 auto;
 }
 
-.contact-form div{padding-top: 6px;}
+#contact-form div{padding-top: 6px;}
 
 input[type=text],
 input[type=email],
