@@ -62,50 +62,6 @@ fetch(url)
 
   
 
-
-// //get the form by its id
-
-// const form = document.getElementById("contact-form"); 
-
-// //1.
-// const formEvent = form.addEventListener("submit", (event) => {
-//   event.preventDefault();
-
-//   //2.
-//   let mail = new FormData(form);
-
-<<<<<<< HEAD
-//   //3.
-//   sendMail(mail);
-// })
-=======
-
-const form = document.getElementById("contact-form"); 
->>>>>>> bbb442951171582a542a94af6a0f8c28c42df32b
-
-// const sendMail = (mail) => {
-//   //1.
-
-//   fetch("https://slick-raphael.github.io/My-Portfolio/send", {
-
-//     method: "post", //2.
-//     body: mail, //3.
-
-<<<<<<< HEAD
-//   }).then((response) => {
-//     return response.json();
-//   });
-// };
-=======
-const sendMail = (mail) => {
-  //1.
-
-  fetch("https://slick-raphael.github.io/My-Portfolio/send", {
-
-    method: "post", //2.
-    body: mail, //3.
->>>>>>> bbb442951171582a542a94af6a0f8c28c42df32b
-
 $(document).ready(function() {
 
   /* Mobile navigation */
