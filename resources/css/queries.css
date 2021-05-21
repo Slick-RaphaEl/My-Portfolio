@@ -52,8 +52,8 @@
 
     .navbar ul li{padding-left: 4px}
 
-
-    .skills-box{
+    .skills-box,
+    .skills-box:first-child{
         display: inline;
         width: 60%;
         margin: 20px 20%;
