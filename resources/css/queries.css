@@ -41,6 +41,7 @@
 
     .skills-box{
         width: 50%;
+        margin: 20px 25%;
     }
     
     footer .col{width: 40%;}
@@ -54,8 +55,8 @@
 
     .skills-box{
         display: inline;
-        width: 24%;
-        margin: 20px 25%;
+        width: 25%;
+        margin: 20px 37.5%;
         font-size: 70%;
     }
     
