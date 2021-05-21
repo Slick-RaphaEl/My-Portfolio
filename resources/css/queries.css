@@ -47,7 +47,7 @@
 }
     /* Small phones: from 0 to 480px */
 @media only screen and (max-width: 480px) {
-    section { padding: 25px 0; }
+    section { padding: 40px 0; }
 
     .navbar ul li{padding-left: 4px}
 
@@ -56,7 +56,7 @@
         margin: 0 0 4px 0;
     }
 
-    .skills-box li{
+    .skills-box{
         display: inline;
         width: 50%;
         font-size: 70%;
