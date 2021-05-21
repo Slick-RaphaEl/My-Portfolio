@@ -43,7 +43,6 @@
         width: 50%;
     }
     
-
     footer .col{width: 40%;}
 }
     /* Small phones: from 0 to 480px */
@@ -57,10 +56,11 @@
         margin: 0 0 4px 0;
     }
 
-    .skills-list li{
+    .skills-box li{
         display: inline;
+        width: 50%;
         font-size: 70%;
-        background-color: rgb(192, 38, 38);
+   
     }
     footer .col{width: 40%;}
 
@@ -68,3 +68,4 @@
     .social-links li{
         display: inline-block;   
     }
+}
