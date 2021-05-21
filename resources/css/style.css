@@ -31,19 +31,12 @@ body {
 
 .row {
     max-width: 1140px;
-
 }
-
 
 section {
     padding: 50px 0;
 }
 
-.box {
-    padding: 1%;
-    margin-right: 0;
-
-}
 
 
 /* ----- HEADINGS ----- */
@@ -171,8 +164,8 @@ input[type=submit]:active {
 header {
     padding-top: 10px;
     padding-bottom: 15px;
-    background-color: #525f7f;
     height: 100vh;
+    overflow: hidden;
 }
 
 .navbar {
@@ -218,16 +211,16 @@ header {
 
 .hero-text h1{
   position: relative;
-  width: 70%;}
+  width: 70%;
+}
 
 .hero-text span{color: #e14eca}
 
 .page-header .category-absolute {
     position: absolute;
-    padding: 0 15px;
-    width: 100%;
+    padding: 0 10px;
+    width: 90%;
     color: rgba(255, 255, 255, 0.5);
-
 }
 
 .squares {
@@ -239,9 +232,8 @@ header {
   background: linear-gradient(0deg, #ba54f5 0%, #e14eca 100%);
   position: absolute;
   transition: 0.5s ease-out;
-  overflow: hidden;
+  overflow:hidden;
   border-radius: 20%;
-
 }
 
  #square1 {
@@ -317,7 +309,7 @@ header {
     100% {
       transform: translateX(-10px);
     }
-  }
+}
 
 
 /* ----- ABOUT----- */
@@ -345,8 +337,8 @@ header {
 
 .overview-box ul li {
     padding: 20px;
-
 }
+
 
 /* ------------------------PROJECTS-------------- */
 .project-section h2,

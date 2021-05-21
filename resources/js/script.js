@@ -1,3 +1,4 @@
+
 //TTPEWRITER ANIMATION
 let i = 0;
 let txt = "from a fullstack web developer in the making.";
