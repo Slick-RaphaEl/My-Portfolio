@@ -204,14 +204,14 @@ header {
 }
 
 .hero-text {
-    margin-left: 30%;
+    width: 60%;
+    margin: 30% 20%;
     padding-top: 15%;
     padding-right: 10%;
 }
 
 .hero-text h1{
   position: relative;
-  width: 70%;
 }
 
 .hero-text span{color: #e14eca}
