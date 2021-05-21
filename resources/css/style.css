@@ -355,9 +355,10 @@ header {
     padding: 20px;
 }
 
-.project-details{
-   
+.project-photo{
+   width: 100%;
 }
+
 
 .project-details h3{
     color: #ba54f5;
