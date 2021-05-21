@@ -58,7 +58,7 @@
 
     .skills-box{
         display: inline;
-        width: 30%;
+        width: 24%;
         margin: 20px 25%;
         font-size: 70%;
     }
@@ -67,8 +67,8 @@
         max-width: 90%;
     }
     
-    .project-details btn{
-        font-size: 60%;
+    .project-details .btn{
+        font-size: 80%;
         padding: 10px;
     }
     
