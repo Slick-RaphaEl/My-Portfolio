@@ -8,7 +8,8 @@
         <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
         <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
-        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Space+Mono:ital@1&display=swap" rel="stylesheet">
         <title>New Slick's Portfolio</title>
 
     </head>
@@ -28,10 +29,13 @@
             <nav id="myHeader">
                 <div>
                     <ul class="navbar js--main-nav">
-                        <li><a href="#about-section">About me</a></li>
-                        <li><a href="#exp-section">Experience</a></li>
-                        <li><a href="#quotes-section">Quotes</a></li>
-                        <li><a href="#section-form">Contact</a></li>
+                        <li><a href="#about-section"><ion-icon name="newspaper-outline" class="icon-big nav-icons"></ion-icon></a></li>
+                        <li><a href="#exp-section"><ion-icon name="library-outline" class="icon-big nav-icons"></ion-icon></a></li>
+                    </ul>
+
+                    <ul class="navbar js--main-nav">
+                        <li><a href="#skills-section"><ion-icon name="construct-outline" class="icon-big nav-icons"></ion-icon></a></li>
+                        <li><a href="#section-form"><ion-icon name="mail-outline" class="icon-big nav-icons"></ion-icon></a></li>
                     </ul>
                     
                 </div>
@@ -49,13 +53,13 @@
 
         <section>
 
-            <div class="overview-box">
+            <div class="overview-box" id="about-section">
                 <h2>an overview </h2>
                 <p class="text">
-                    Hi!, I'm Raphael Otuya, a self-driven full-stack web developer. I am a native of Delta state in the southern part of Nigeria, i was born on the 20th of April, 1996.<br> I graduated from FEDERAL GOVERNMENT COLLEGE, ENUGU and The Department of ESTATE MANAGEMENT in THE UNIVERSITY OF NIGERIA,NSUKKA.<br>
+                    Hi!, I'm Raphael Otuya, a self-driven full-stack web developer. I am a native of Delta state in the southern part of Nigeria, i was born on the 20th of April, 1996. I graduated from FEDERAL GOVERNMENT COLLEGE.<br>I am a team player, highly driven and also passionate about building tools to help as much people as possible.
                 </p>
 
-                <div class="row">
+                <div class="row skills-section" id="skills-section">
                     <h2>my skills</h2>
                     <div class="skills-container">
                         <ul class="col span-1-of-2 skills-box">
@@ -84,9 +88,19 @@
                                 <span class="skills-label">NODE JS</span>
                             </li>
 
+                            <li>
+                                <ion-icon name="logo-firebase" class="icon-big"></ion-icon>
+                                <span class="skills-label">FIREBASE</span>
+                            </li>
+
                         </ul>
 
                         <ul class="col span-1-of-2 skills-box">
+                            <li>
+                                <img alt="nextjs-logo" src="/resources/css/img/nextjs-.png" class="skills-logo">
+                                <span class="skills-label">NEXT JS</span>
+                            </li>
+
                             <li>
                                 <img alt="ejs-logo" src="/resources/css/img/ejs-logo.png" class="skills-logo">
                                 <span class="skills-label">EJS</span>
@@ -126,7 +140,7 @@
             <div class="project-box clearfix">
                 <div class="project-card">
                     <div class="col span-1-of-3">
-                        <img alt="project-photo" src="">
+                        <img alt="project-photo" src="/resources/css/img/chop-beta.png" class="project-photo">
                     </div>
 
                     <div class="col span-2-of-3 project-details">
@@ -137,24 +151,23 @@
                             It is CRUD compliant and built in a restful state.
                         </p>
 
-                        <a href="#0" class="btn btn-full">Visit Website</a>
+                        <a href="#0" class="btn btn-full" id="project-link">Visit Website</a>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="col span-1-of-3">
-                        <img alt="project-photo" src="">
+                        <img alt="project-photo" src="/resources/css/img/travel-guy.png" class="project-photo">
                     </div>
 
                     <div class="col span-2-of-3 project-details">
-                        <h3>Travel Guy</h3>
+                        <h3>Next js chat app</h3>
 
                         <p class="project-description">
-                            Travel Guy is an online search directory for dispatch riders and moving companies in an area.
-                            It is built with Ejs, Node js and postgresql.
+                            A one to one chat app made using Next js and firebase, server sider rendering is incorporated for a better user experience.
                         </p>
 
-                        <a href="#0" class="btn btn-full">Visit website</a>
+                        <a href="#0" class="btn btn-full" id="project-link">Visit website</a>
                     </div>
                 </div>
 
@@ -217,29 +230,14 @@
             <div>
                 <form method="post" action="#0" id="contact-form">
                     <div class="row">
-                        <div class="col span-1-of-3">
-                            <label for="senderName">Name:</label>
-                        </div>
-                        <div class="col span-2-of-3">
-                            <input type="text" name="senderName" id="name" placeholder="Your name" required>
-                        </div>
+                        <input type="text" name="senderName" id="name" placeholder="Your name" required>  
                     </div>
                     <div class="row">
-                        <div class="col span-1-of-3">
-                            <label for="senderEmail">Email:</label>
-                        </div>
-                        <div class="col span-2-of-3">
-                            <input type="email" name="senderEmail" id="email" placeholder="Your email" required>
-                        </div>
+                        <input type="email" name="senderEmail" id="email" placeholder="Your email" required>
                     </div>
 
                     <div class="row">
-                        <div class="col span-1-of-3">
-                            <label for="message">Drop a suggestion:</label>
-                        </div>
-                        <div class="col span-2-of-3">
-                            <textarea name="message" placeholder="Your message"></textarea>
-                        </div>
+                         <textarea name="message" placeholder="Your message"></textarea>
                     </div>
                     <div class="row">
                         <div class="col span-1-of-3">
