@@ -10,11 +10,12 @@
         <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Space+Mono:ital@1&display=swap" rel="stylesheet">
-        <title>New Slick's Portfolio</title>
+        <title>Slick's Portfolio</title>
 
     </head>
 
     <body>
+        <div class="shuriken-1"></div>
         <header class="clearfix ">
             <div class="page-header clearfix">
               <div class="squares" id="square1"></div>
@@ -287,6 +288,11 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+        <script type="text/javascript">
+            setTimeout(function(){
+                $('.loader-bg').fadeToggle();
+            }, 3000);
+        </script>
         <script src="vendors/js/particles.js"></script>
         <script src="vendors/js/app.js"></script>
         <script src="resources/js/script.js"></script>
