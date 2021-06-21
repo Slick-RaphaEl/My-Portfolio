@@ -77,6 +77,9 @@
     /* Small phones: from 0 to 480px */
 @media only screen and (max-width: 480px) {
     section { padding: 40px 0; }
+    .hero-text{height: auto;}
+    
+    .navbar{width: 100%;}
 
     .navbar ul li{padding-left: 4px}
 
@@ -87,6 +90,8 @@
         margin: 20px 20%;
         font-size: 70%;
     }
+    
+    .project-card{ margin-bottom: 20px;}
     
     .project-description{
         max-width: 90%;
