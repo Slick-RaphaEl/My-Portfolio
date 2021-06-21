@@ -16,6 +16,37 @@
         margin: 0 0 4px 0;
     }
     
+
+    .navbar:first-child,
+    .navbar{
+        display: inline-block;
+        float: none;
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    .navbar:first-child{
+        margin-left: 25%;
+    }
+
+    .navbar li{
+        padding: 5px 10px;
+    }
+
+    .navbar li:first-child{
+        padding-left: 40px;
+    }
+
+    .navbar li:last-child{
+        padding-right: 0px;
+        margin-right: 0;
+    }
+
+    .sticky{
+        background-color: #ba54f5;
+        width: 100%;
+        border-bottom: 0px solid #fff;
+    }
      
     /* .navbar { display: none; }
     .mobile-nav-icon {display: inline-block;}
@@ -26,10 +57,7 @@
         margin-left: 20px;
     }
     
-    .navbar li {
-        display: block;
-        padding: 2px;
-    }
+    
     
     .navbar li a:link,
     .navbar li a:visited {

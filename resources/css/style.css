@@ -185,20 +185,16 @@ header {
 
 
 .navbar {
-  color: #f1f1f1;
-  position: relative;
   float: left;
-  width: 60px;
+  width: 60%;
   display: inline-block;
     list-style: none;
-    margin-left: 10px;
 }
 
 
 .navbar li{
     display: inline-block;
-    padding: 16px;
-    margin: 15%;
+    padding: 10px;
 }
 
 
@@ -220,8 +216,9 @@ header {
     position: fixed;
     top: 0;
     float: left;
-    width: 50%;
     z-index: +999;
+    /*box-shadow: 1px 4px #2a1436;
+    background-color: #ba54f5;*/
 }
 
 .hero-text {
