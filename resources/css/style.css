@@ -367,6 +367,9 @@ header {
     padding: 20px;
 }
 
+.overview-box h2{
+    margin-top: 40px;
+}
 
 /* ------------------------PROJECTS-------------- */
 .project-section h2,
@@ -390,6 +393,7 @@ header {
 .project-details{
     margin-bottom: 30px;
 }
+
 
 .project-details h3{
     color: #ba54f5;

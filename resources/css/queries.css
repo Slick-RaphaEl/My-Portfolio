@@ -69,30 +69,52 @@
 
     .skills-box{
         width: 50%;
+        margin: 20px 25%;
     }
     
-
     footer .col{width: 40%;}
 }
     /* Small phones: from 0 to 480px */
 @media only screen and (max-width: 480px) {
-    section { padding: 25px 0; }
+    section { padding: 40px 0; }
 
     .navbar ul li{padding-left: 4px}
 
-    .col { 
-        width: 100%;
-        margin: 0 0 4px 0;
+    .skills-box,
+    .skills-box:first-child{
+        display: inline;
+        width: 60%;
+        margin: 20px 20%;
+        font-size: 70%;
+    }
+    
+    .project-description{
+        max-width: 90%;
+    }
+    
+    .project-details .btn{
+        font-size: 80%;
+        padding: 10px;
+    }
+    
+    .video-box{
+        width: 80%;
+        margin: 50px 10%;
+    }
+    
+    .video-box h3{
+        margin-left: 5%;
+        margin-bottom: 20px;
+    }
+    
+    #section-form h2{
+        margin-left: 5%;
     }
 
-    .skills-list li{
-        display: inline;
-        font-size: 70%;
-        background-color: rgb(192, 38, 38);
-    }
     footer .col{width: 40%;}
 
     .footer-nav li,
     .social-links li{
         display: inline-block;   
     }
+}
