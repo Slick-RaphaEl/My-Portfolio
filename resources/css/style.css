@@ -12,6 +12,8 @@
   width: 80px;
   height: 80px;
   position: relative;
+  top: calc(50vh - 75px);
+    left: calc(50vw - 75px);
   color:#8d7958;
   background:
     conic-gradient(from  165deg at top   ,#0000, currentColor 1deg 30deg,#0000 31deg) top,
@@ -19,6 +21,7 @@
     conic-gradient(from  -15deg at bottom,#0000, currentColor 1deg 30deg,#0000 31deg) bottom, 
     conic-gradient(from -105deg at right ,#0000, currentColor 1deg 30deg,#0000 31deg) right;
   background-size: 100% 50%,50% 100%;
+  mask:radial-gradient(circle 5px,#0000 90%,#000);
   -webkit-mask:radial-gradient(circle 5px,#0000 90%,#000);
   background-repeat: no-repeat;
   animation:sh1 1.5s infinite linear;
@@ -40,7 +43,7 @@ html,
 body {
     background-color: #525f7f;
     color: #fff;
-    font-family: 'Space Mono', monospace, sans-serif;
+    font-family: monospace, sans-serif;
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
@@ -91,7 +94,7 @@ h1 {
     font-size: 180%;
     word-spacing: 4px;
     letter-spacing: 1px;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Space Mono', cursive;
 }
 
 h2 {
@@ -100,7 +103,7 @@ h2 {
     text-align: center;
     margin-bottom: 30px;
     letter-spacing: 1px;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Space Mono', cursive;
 
 }
 
@@ -217,7 +220,7 @@ header {
 
 
 .navbar {
-  float: left;
+  /* float: left; */
   width: 60%;
   display: inline-block;
     list-style: none;
@@ -259,7 +262,7 @@ header {
     border-radius: 20px;
     box-shadow: 2px 5px #191a19;
     width: 60%;
-    height: 50%;
+    height: padding;
     margin-left: 20%;
     margin-top: 15%;
     padding: 5%;
@@ -385,11 +388,12 @@ header {
 }
 
 .skills-logo{
-    width: 70px;
+    width: 40px;
     display: block;
     border-radius: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
+
 
 .overview-box ul {
     list-style: none;
@@ -416,6 +420,7 @@ header {
 
 .project-card{
     padding: 20px;
+    margin-bottom: 20px;
 }
 
 .project-photo{
@@ -445,7 +450,7 @@ header {
 
 #project-link{
     font-size:50%;
-    margin: 5px 20px;
+    /* margin: 15px 20px; */
 }
 /* ----------------------------------------------- */
 /* QUOTES SECTION */
@@ -541,18 +546,16 @@ header {
     position: relative;
     width: 60%;
     margin: 50px 20%;
-    z-index: +999;
+    z-index: +1;
 }
 
 .video-box h3{
     margin-left: 25%;
     margin-bottom: 20px;
-    z-index: +999;
 }
 
 .write-container{
     border-radius: 20px;
-    z-index: +999;
 }
 
 /* ----------------------------------------------- */
@@ -569,6 +572,11 @@ header {
 #contact-form {
     width: 60%;
     margin: 20px 20%;
+}
+
+#contact-form input[type=submit]{
+    width: 60%;
+    margin: 10px 20% 10% 35%;
 }
 
 #section-form h2{

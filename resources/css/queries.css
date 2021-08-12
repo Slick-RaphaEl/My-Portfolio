@@ -3,26 +3,34 @@
     body { font-size: 18px; }
     section { padding: 60px 0; }
 
+    #section-form h2{
+        margin-left: 10%;
+    }
+
 }
 
 /* Small phones to small tablets: from 481px to 767px */
 @media only screen and (max-width: 767px) {
     body { font-size: 16px; }
     section { padding: 30px 0; }
+    h1, h2{font-size: 100%;}
     
     .row,
     .col { 
         width: 100%;
-        margin: 0 0 4px 0;
+        margin: 0 0 20px 0;
     }
     
-
+    #myHeader .row{
+        margin-bottom: 0;
+    }
     .navbar:first-child,
     .navbar{
         display: inline-block;
         float: none;
         width: 60%;
         margin-left: 20%;
+        margin-bottom: 0;
     }
 
     .navbar:first-child{
@@ -30,7 +38,7 @@
     }
 
     .navbar li{
-        padding: 5px 10px;
+        padding: 25px 10px;
     }
 
     .navbar li:first-child{
@@ -43,53 +51,61 @@
     }
 
     .sticky{
-        background-color: #ba54f5;
+        background-color: #2C3531;
         width: 100%;
         border-bottom: 0px solid #fff;
     }
-     
-    /* .navbar { display: none; }
-    .mobile-nav-icon {display: inline-block;}
-    
-    .navbar {
-        float: right;
-        margin-top: 10px;
-        margin-left: 20px;
-    }
-    
-    
-    
-    .navbar li a:link,
-    .navbar li a:visited {
-        display: block;
-        border: 0;
-        padding: 10px 0;
-        font-size: 100%;
-    } */
 
-    .skills-box{
-        width: 50%;
-        margin: 20px 25%;
+    .skills-container{
+        width: 80%;
+        margin-left: 25%;
     }
-    
-    footer .col{width: 40%;}
-}
-    /* Small phones: from 0 to 480px */
-@media only screen and (max-width: 480px) {
-    section { padding: 40px 0; }
-    .hero-text{height: auto;}
-    
-    .navbar{width: 100%;}
-
-    .navbar ul li{padding-left: 4px}
 
     .skills-box,
     .skills-box:first-child{
         display: inline;
-        width: 60%;
-        margin: 20px 20%;
+        width: 40%;
+        margin: 10px 0;
         font-size: 70%;
     }
+     
+
+
+    #section-form h2{
+        margin-left: 5%;
+        margin-top: 20px;
+    }
+
+    .project-details{ 
+        margin: 10px 10%;
+    }
+
+    .project-link{margin: 20px 30px;}
+
+    #contact-form input[type=submit]{
+        margin: 10px 20%;
+    }
+    
+    footer .col{width: 40%;}
+}
+
+    /* Small phones: from 0 to 480px */
+@media only screen and (max-width: 480px) {
+
+    section { padding: 40px 0; }
+    .hero-text{height: auto;}
+    
+    .navbar:first-child,
+    .navbar{
+        width: 80%;
+        margin-left: 15%;
+    }
+
+    .navbar ul li{padding-left: 4px;}
+
+    .hero-text{height: auto;}
+
+    
     
     .project-card{ margin-bottom: 20px;}
     
@@ -100,6 +116,7 @@
     .project-details .btn{
         font-size: 80%;
         padding: 10px;
+        margin-bottom: 50px;
     }
     
     .video-box{
@@ -111,15 +128,24 @@
         margin-left: 5%;
         margin-bottom: 20px;
     }
+
+    #section-form{
+        height: auto;
+    }
     
     #section-form h2{
         margin-left: 5%;
     }
 
-    footer .col{width: 40%;}
+    footer .col{width: 45%;}
 
     .footer-nav li,
     .social-links li{
         display: inline-block;   
+    }
+
+    footer .row{
+        width: 90%;
+        margin-left: 5%;
     }
 }
