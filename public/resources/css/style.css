@@ -268,10 +268,6 @@ header {
     padding: 5%;
 }
 
-/* .hero-text h1{
-  position: relative;
-  width: 70%;
-} */
 
 .hero-text span{color: #ee03cb}
 
@@ -563,7 +559,7 @@ header {
 /* ----------------------------------------------- */
 
 #section-form{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/nubelson-fernandes-gTs2w7bu3Qo-unsplash.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://dl.dropboxusercontent.com/s/vvic8w27g585kpz/nubelson-fernandes-gTs2w7bu3Qo-unsplash.jpg?dl=0");
     background-attachment: fixed;
     background-size: cover;
     height: 90vh;
