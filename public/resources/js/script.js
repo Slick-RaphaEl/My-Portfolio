@@ -1,4 +1,3 @@
-
 //TTPEWRITER ANIMATION
 let i = 0;
 let txt = "from a fullstack web developer.";
@@ -10,7 +9,7 @@ const typewriter = () => {
     i++;
     setTimeout(typewriter, speed);
   }
-}
+};
 
 typewriter();
 
@@ -27,7 +26,7 @@ const addStickyHeader = () => {
   } else {
     header.classList.remove("sticky");
   }
-}
+};
 
 // QUOTES SLIDES
 let slide_index = 1;  
@@ -37,21 +36,22 @@ let currentSlide = (n) => {displaySlides(slide_index = n);}
 const displaySlides = (n) => {  
   let i;  
   let slides = document.getElementsByClassName("showSlide");  
-  if (n > slides.length) { slide_index = 1 }  
-  if (n < 1) { slide_index = slides.length }  
+  if (n > slides.length) { slide_index = 1; }  
+  if (n < 1) { slide_index = slides.length; }  
   for (i = 0; i < slides.length; i++) {slides[i].style.display = "none";}  
      slides[slide_index - 1].style.display = "block";  
-}  
+};  
 
 displaySlides(slide_index); 
 
 
 
 //Youtube API 
+const youtubeApiKey = process.env.YOUTUBE_API_KEY;
 
 const searchTerms = ["factory%20functions","data%20structures", "array%20functions%20javascript", "composition%20over%20inheritance", "lambda%20functions", "streams%20java", "higher%20order%functions%javascript", "functional%20programming", "c++%20lambda%20functions", "sorting%20algorithms"];
 const getSearchTerm = () => searchTerms[Math.floor(Math.random() * (searchTerms.length-1))];
-const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${getSearchTerm()}&key=${YOUTUBE_API_KEY}`;
+const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${getSearchTerm()}&key=${youtubeApiKey}`;
 
 fetch(url)
   .then(response => response.json())
