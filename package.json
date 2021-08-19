@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -18,13 +18,14 @@
   },
   "homepage": "https://github.com/Slick-RaphaEl/My-Portfolio#readme",
   "dependencies": {
-<<<<<<< HEAD
     "animate.css": "^4.1.1",
-=======
->>>>>>> 990bd53d7fbfc8ba94414f40b93d0c4806e9b5a8
+    "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "firebase": "^8.9.1",
     "multiparty": "^4.2.2",
-    "nodemailer": "^6.4.17"
+    "nodemailer": "^6.4.17",
+    "nodemon": "^2.0.12"
   }
 }

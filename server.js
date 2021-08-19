@@ -1,69 +1,127 @@
 const express = require("express");
-const nodemailer = require("nodemailer");
+const ejs = require('ejs');
+const path = require('path');
+const bodyParser = require('body-parser');
 const multiparty = require("multiparty");
 require("dotenv").config();
+const firebase = require('firebase/app');
+const firestore = require("firebase/firestore");
+const firebaseAuth = require('firebase/auth');
 
 // instantiate an express app
 const app = express();
 
-//make the contact page the the first page on the app
-app.route("/").get(function (req, res) {
-  res.sendFile(process.cwd() + "/public/index.html");
-});
+const firebaseConfig = {
+  apiKey: "AIzaSyAV-97heenBVrPhAM3JqISg_Sad6dY1608",
+  authDomain: "my-portfolio-3a152.firebaseapp.com",
+  projectId: "my-portfolio-3a152",
+  storageBucket: "my-portfolio-3a152.appspot.com",
+  messagingSenderId: "453034916275",
+  appId: "1:453034916275:web:28c5c083269e9758b533c6"
+};
+
+const db = firebase.initializeApp(firebaseConfig);
+
+
+app.use(express.static('public'));
+app.set('view engine', 'ejs');
+app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "views")));
+app.use(express.static(path.join(__dirname, "js")));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 
 //port will be 5000 for testing
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}...`);
+
+//make the contact page the the first page on the app
+app.route("/").get(function (req, res) {
+  res.render("pages/index");
 });
 
-
-const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com", //replace with your email provider
-  port: 587,
-  auth: {
-    user: process.env.email,
-    pass: process.env.pass,
-  },
+app.route("/admin-login").get(function (req, res) {
+  res.render("pages/slick-enter-portal");
 });
 
+app.get ('/blog/', async (req, res) => {
+  try{
+    await firebase.firestore()
+      .collection("articles")
+      .orderBy('published_date', 'desc')
+      .get()
+      .then(function(docs) {
+        results = docs.docs.map(doc => doc.data()),
+        res.render("blog/index", {
+          posts: results
+        });
+      } );
+  } catch(err) {  
+    res.status(500).json("Something went wrong");
+  }
+});
 
-// verify connection configuration
-transporter.verify(function (error, success) {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log("Server is ready to take our messages");
+app.get ('/blog/:id', async (req, res) => {
+  try{
+    const id = req.params.id;
+    const post = await firebase.firestore()
+      .collection("articles")
+      .doc(id)
+      .get()
+      .then(function(doc) {
+        let  relatedArticles = firestore.firestore().collection("articles")
+        .where("tags", "==", doc.tags)
+        .get();
+    res.render("/blog/post", {
+      post: posts,
+      relatated: relatedArticles
+    });
+      } );
+  } catch(err) {  
+    res.status(500).json("Something went wrong");
   }
 });
 
 
-app.post("/send", (req, res) => {
+app.post("/send-message", async (req, res) => {
   //1.
-  let form = new multiparty.Form();
-  let data = {};
-  form.parse(req, function (err, fields) {
-    console.log(fields);
-    Object.keys(fields).forEach(function (property) {
-      data[property] = fields[property].toString();
+  const {senderEmail, senderName, message} = req.body;
+  await firebase.firestore()
+    .collection("messages")
+    .add({
+      senderEmail,
+      senderName,
+      message
+    }).then(function(doc) {
+      res.render('pages/index');
     });
+});
 
-    //2. You can configure the object however you want
-    const mail = {
-      from: data.name,
-      to: process.env.EMAIL,
-      subject: data.subject,
-      text: `${data.name} <${data.email}> \n${data.message}`,
-    };
+app.post("/send-article", async (req, res) => {
+  const{title, description, tags, article_imageurl,  content} = req.body;
+  await firebase.firestore()
+    .collection("articles")
+    .add({
+      "title": title,
+      "description": description,
+      "tags": tags,
+      "article_imageurl": article_imageurl,
+      "content": content,
+      "id": Math.floor(Math.random() * 100) + 1,
+      "published_date": Date.now()
+    }).then(function(doc) {
+      res.render('pages/index');
+    } );
+});
 
-    //3.
-    transporter.sendMail(mail, (err, data) => {
-      if (err) {
-        console.log(err);
-        res.status(500).send("Something went wrong.");
-      } else {
-        res.status(200).send("Email successfully sent to recipient!");
-      }
-    });
+app.post("/admin-sign-in", async (req, res) => {
+  const {email, password} = req.body;
+  await firebase.auth().signInWithEmailAndPassword(email, password)
+  .then(function(user) {
+    res.render('pages/slick-portal');
   });
+});
+
+app.listen(PORT, () => {
+  console.log(`Listening on port ${PORT}...`);
 });

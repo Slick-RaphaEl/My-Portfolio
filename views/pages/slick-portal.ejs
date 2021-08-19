@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Space+Mono:ital@1&display=swap" rel="stylesheet">
+        <title>Slick's Portfolio</title>
+
+    </head>
+
+    <body>
+        <div id="app">  
+            <form id="article-form" class="login-form" action="/send-article" method="post">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" id="title" name="title" placeholder="Title">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea class="form-control" id="description" name="description" placeholder="Description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="image">Image</label>
+                    <input type="text" class="form-control" id="image" name="article_imageurl" placeholder="Image">
+                </div>
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select class="form-control" id="category" name="tags">
+                        <option value="">Select Category</option>
+                        <option value="1">typescript</option>
+                        <option value="2">Development</option>
+                        <option value="3">Tech news</option>
+                        <option value="4">flutter</option>
+                    </select>
+                </div>
+                <div class="form-group" style="margin-top: 20px;">
+                    <label for="content">Content</label>
+                    <textarea class="form-control" id="content" name="content" placeholder="Content"></textarea>
+                </div>
+                <input type="submit" value="Submit" class="btn btn-primary" >
+            </form>
+        </div>
+    </body>
+</html>

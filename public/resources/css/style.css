@@ -711,3 +711,10 @@ footer p {
     color: #888;
 }
 
+.login-form{
+    width: 60%;
+    margin: 40px 20%;
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+}
