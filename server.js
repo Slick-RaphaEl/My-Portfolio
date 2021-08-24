@@ -37,7 +37,10 @@ const PORT = process.env.PORT || 5000;
 
 //make the contact page the the first page on the app
 app.route("/").get(function (req, res) {
-  res.render("pages/index");
+  let youtubeApiKey = AIzaSyD7FZfDbRiGK0I8Quw40i8TcBCADjoLJXY;
+  res.render("pages/index", {
+    youtubeApiKey : youtubeApiKey,
+  });
 });
 
 app.route("/admin-login").get(function (req, res) {
@@ -61,7 +64,7 @@ app.get ('/blog/', async (req, res) => {
   }
 });
 
-app.get ('/blog/:id', async (req, res) => {
+app.get ('/get-single-post', async (req, res) => {
   try{
     const id = req.params.id;
     const post = await firebase.firestore()
