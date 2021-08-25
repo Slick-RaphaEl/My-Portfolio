@@ -4,10 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><%= post.title %></title>
-	<link rel="stylesheet" href="/views/blog/fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
 	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
-    <link href="/views/blog/css/bootstrap.min.css" type="text/css" rel="stylesheet">
-    <link href="/views/blog/css/templatemo-xtra-blog.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="../resources/css/fontawesome/css/all.min.css">
+    <link href="../resources/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../resources/css/blog.css">
 </head>
 
 <body>
@@ -50,20 +50,49 @@
                     <hr class="tm-hr-primary tm-mb-55">
                     <!-- Video player 1422x800 -->
                    
-                    <img src="<%= post.article_imageurl %>" height="535" width="954" alt="article picture" class="tm-mb-40"/>
+                    <img src="<%= post.article_imageurl %>" width="934" height="535" alt="article picture" class="tm-mb-40"/>
                 </div>
             </div>
             <div class="row tm-row">
                 <div class="col-lg-8 tm-post-col">
                     <div class="tm-post-full">                    
                         <div class="mb-4">
-                            <h2 class="pt-2 tm-color-primary tm-post-title">Single Post of Xtra Blog HTML Template</h2>
-                            <p class="tm-mb-40">June 16, 2020 posted by Admin Nat</p>
+                            <h2 class="pt-2 tm-color-primary tm-post-title"><%= post.title %></h2>
+                            <p class="tm-mb-40"><%= post.author_name %></p>
+                            <h2 class="pt-2 tm-color-primary tm-post-title">
+                                <%= post.content.heading_content1 %>
+                            </h2>
                             <p>
-                                <%= post.content %>
+                                <%= post.content.paragraph_content1 %></p>
+                            </p>
+
+                            <h2 class="pt-2 tm-color-primary tm-post-title">
+                                <%= post.content.sub_heading_content1 %>
+                            </h2>
+
+                            <p>
+                                <%= post.content.paragraph1_content1 %>
+                            </p>
+
+                            <p>
+                                <%= post.content.paragraph2_content1 %>
+                            </p>
+
+                            <h2 class="pt-2 tm-color-primary tm-post-title">
+                                <%= post.content.heading_content2 %>
+                            </h2>
+
+                            <p>
+                                <%= post.content.paragraph1_content2 %>
+                            </p>
+
+                            <p>
+                                <%= post.content.paragraph2_content2 %>
                             </p>
                         </div>
-                        
+                    </div>
+                </div>
+
                 <aside class="col-lg-4 tm-aside-col">
                     <div class="tm-post-sidebar">
                         <hr class="mb-3 tm-hr-primary">
@@ -75,12 +104,19 @@
                         </ul>
                         <hr class="mb-3 tm-hr-primary">
                         <h2 class="tm-mb-40 tm-post-title tm-color-primary">Related Posts</h2>
-                       
+                        <% for (var i = 0; i < related.length; i++) { %>
+                        <a href="#" class="d-block tm-mb-40">
+                            <figure>
+                                <img src="<%=related[i].article_imageurl%>" alt="Image" class="mb-3 img-fluid">
+                                <figcaption class="tm-color-primary"><%=related[i].description%></figcaption>
+                            </figure>
+                        </a>
+                        <% } %>    
                     </div>                    
                 </aside>
             </div>
             <footer class="row tm-row">
-                <div class="col-md-6 col-12 tm-color-gray">
+                <div class="col-md-6 col-12" style="color: #0CC;"> 
                    Softwork Developers Blog
                 </div>
                

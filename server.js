@@ -23,9 +23,9 @@ const firebaseConfig = {
 const db = firebase.initializeApp(firebaseConfig);
 
 
-app.use(express.static('/public/'));
+app.use(express.static('public'));
 app.set('view engine', 'ejs');
-app.use(express.static(path.join(__dirname, "/public/")));
+app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "views/")));
 app.use(express.static(path.join(__dirname, "js")));
 app.use(bodyParser.json());
@@ -55,7 +55,7 @@ app.get ('/blog/', async (req, res) => {
       .get()
       .then(function(docs) {
         results = docs.docs.map(doc => doc.data()),
-        res.render("blog/index", {
+        res.render("pages/blog/index", {
           posts: results
         });
       } );
@@ -66,7 +66,6 @@ app.get ('/blog/', async (req, res) => {
 
 app.get ('/get-single-post', async (req, res) => {
   const id = req.query.id.toString().trim();
-  console.log(id);
   
     const article = await firebase.firestore()
       .collection("articles")
@@ -77,11 +76,13 @@ app.get ('/get-single-post', async (req, res) => {
         const post = article.data();
         console.log("posts = ", post);
         let  relatedArticles = await firebase.firestore().collection("articles")
-        .where("tags", "==", post.tags[0])
+        .where("tags", "==", post.tags)
         .get();
-    res.render("blog/post", {
-      post: post
-      //relatated: relatedArticles
+        const relatedPosts = relatedArticles.docs.map(doc => doc.data());
+        console.log("relatedPosts = ", relatedPosts);
+    res.render("pages/blog/post", {
+      post: post,
+      related: relatedPosts
     });
 });
 
@@ -101,7 +102,7 @@ app.post("/send-message", async (req, res) => {
 });
 
 app.post("/send-article", async (req, res) => {
-  const{title, description, tags, article_imageurl,  content} = req.body;
+  const{title, description, tags, article_imageurl, heading_content1, paragraph_content1, sub_heading_content1, paragraph1_content1, paragraph2_content1, heading_content2, paragraph1_content2, paragraph2_content2,} = req.body;
   await firebase.firestore()
     .collection("articles")
     .add({
@@ -109,7 +110,16 @@ app.post("/send-article", async (req, res) => {
       "description": description,
       "tags": tags,
       "article_imageurl": article_imageurl,
-      "content": content,
+      "content":{
+        "heading_content1": heading_content1,
+        "paragraph_content1": paragraph_content1,
+        "sub_heading_content1": sub_heading_content1,
+        "paragraph1_content1": paragraph1_content1,
+        "paragraph2_content1": paragraph2_content1,
+        "heading_content2": heading_content2,
+        "paragraph1_content2": paragraph1_content2,
+        "paragraph2_content2": paragraph2_content2,
+      },
       "id": id,
       "published_date": Date.now()
     }).then(function(doc) {
