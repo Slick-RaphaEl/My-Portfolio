@@ -23,10 +23,10 @@ const firebaseConfig = {
 const db = firebase.initializeApp(firebaseConfig);
 
 
-app.use(express.static('public'));
+app.use(express.static('/public/'));
 app.set('view engine', 'ejs');
-app.use(express.static(path.join(__dirname, "public")));
-app.use(express.static(path.join(__dirname, "views")));
+app.use(express.static(path.join(__dirname, "/public/")));
+app.use(express.static(path.join(__dirname, "views/")));
 app.use(express.static(path.join(__dirname, "js")));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -37,7 +37,7 @@ const PORT = process.env.PORT || 5000;
 
 //make the contact page the the first page on the app
 app.route("/").get(function (req, res) {
-  let youtubeApiKey = AIzaSyD7FZfDbRiGK0I8Quw40i8TcBCADjoLJXY;
+  let youtubeApiKey = "AIzaSyD7FZfDbRiGK0I8Quw40i8TcBCADjoLJXY";
   res.render("pages/index", {
     youtubeApiKey : youtubeApiKey,
   });
@@ -65,24 +65,24 @@ app.get ('/blog/', async (req, res) => {
 });
 
 app.get ('/get-single-post', async (req, res) => {
-  try{
-    const id = req.params.id;
-    const post = await firebase.firestore()
+  const id = req.query.id.toString().trim();
+  console.log(id);
+  
+    const article = await firebase.firestore()
       .collection("articles")
       .doc(id)
-      .get()
-      .then(function(doc) {
-        let  relatedArticles = firestore.firestore().collection("articles")
-        .where("tags", "==", doc.tags)
+      .get();
+
+        if (!article.exists) {console.log("no document");}
+        const post = article.data();
+        console.log("posts = ", post);
+        let  relatedArticles = await firebase.firestore().collection("articles")
+        .where("tags", "==", post.tags[0])
         .get();
-    res.render("/blog/post", {
-      post: posts,
-      relatated: relatedArticles
+    res.render("blog/post", {
+      post: post
+      //relatated: relatedArticles
     });
-      } );
-  } catch(err) {  
-    res.status(500).json("Something went wrong");
-  }
 });
 
 
@@ -110,7 +110,7 @@ app.post("/send-article", async (req, res) => {
       "tags": tags,
       "article_imageurl": article_imageurl,
       "content": content,
-      "id": Math.floor(Math.random() * 100) + 1,
+      "id": id,
       "published_date": Date.now()
     }).then(function(doc) {
       res.render('pages/index');
