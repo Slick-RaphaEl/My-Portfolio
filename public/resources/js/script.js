@@ -1,12 +1,12 @@
 //TTPEWRITER ANIMATION
-let i = 0;
+let index = 0;
 let txt = "from a fullstack web developer.";
 let speed = 150;
 
 const typewriter = () => {
-  if (i < txt.length) {
-    document.getElementById("textp").innerHTML += txt.charAt(i);
-    i++;
+  if (index < txt.length) {
+    document.getElementById("textp").innerHTML += txt.charAt(index);
+    index++;
     setTimeout(typewriter, speed);
   }
 };
@@ -14,7 +14,7 @@ const typewriter = () => {
 typewriter();
 
 // sticky header
-window.onscroll = function() {addStickyHeader()};
+window.onscroll = function() {addStickyHeader();};
 
 const header = document.getElementById("myHeader");
 
@@ -30,8 +30,8 @@ const addStickyHeader = () => {
 
 // QUOTES SLIDES
 let slide_index = 1;  
-let nextSlide = (n) => {displaySlides(slide_index += n); }
-let currentSlide = (n) => {displaySlides(slide_index = n);}  
+let nextSlide = (n) => {displaySlides(slide_index += n); };
+let currentSlide = (n) => {displaySlides(slide_index = n);};
 
 const displaySlides = (n) => {  
   let i;  
@@ -43,3 +43,18 @@ const displaySlides = (n) => {
 };  
 
 displaySlides(slide_index); 
+
+const inViewport = (entries, observer) => {
+  entries.forEach(entry => {
+    entry.target.classList.toggle("is-inViewport", entry.isIntersecting);
+  });
+};
+
+const Obs = new IntersectionObserver(inViewport);
+const obsOptions = {}; //See: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options
+
+// Attach observer to every [data-inviewport] element:
+const ELs_inViewport = document.querySelectorAll('[data-inviewport]');
+ELs_inViewport.forEach(EL => {
+  Obs.observe(EL, obsOptions);
+});

@@ -293,6 +293,7 @@ header {
  #square1 {
   animation: move-left-right 2s infinite;
   height: 300px;
+  border-radius: 50px;
   width: 300px;
   opacity: 0.5;
   left: 3%;
@@ -382,8 +383,13 @@ header {
     margin-left:  30%;
 }
 
+.skills-list{
+    height: 150px;
+    padding: 10px;
+}
+
 .skills-logo{
-    width: 40px;
+    width: 30%;
     display: block;
     border-radius: 20px;
     margin-bottom: 10px;
@@ -394,19 +400,35 @@ header {
     list-style: none;
 }
 
-.overview-box ul li {
-    padding: 20px;
-}
-
 .overview-box h2{
     margin-top: 40px;
+}
+ 
+/* inViewport */
+
+[data-inviewport="scale-in"] { 
+transition: 2s;
+transform: scale(0.5);
+}
+
+[data-inviewport="scale-in"].is-inViewport { 
+transform: scale(1);
+}
+
+[data-inviewport="fade-rotate"] { 
+transition: 2s;
+opacity: 0;
+}
+[data-inviewport="fade-rotate"].is-inViewport { 
+transform: rotate(360deg);
+opacity: 1;
 }
 
 /* ------------------------PROJECTS-------------- */
 .project-section h2,
 .project-box{
     width: 60%;
-    margin: 20px 20%;
+    margin: 10px 20%;
 }
 
 .project-section h2{

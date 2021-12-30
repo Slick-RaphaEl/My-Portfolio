@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
@@ -22,21 +23,12 @@
         
         
         <header class="clearfix ">
-            <div class="page-header clearfix">
-              <div class="squares" id="square1"></div>
-              <div class="squares" id="square2"></div>
-              <div class="squares" id="square3"></div>
-              <div class="squares" id="square4"></div>
-              <div class="squares" id="square5"></div>
-              <div class="squares" id="square6"></div>
-              <div class="squares" id="square7"></div>
-            </div>
-
+            <div id="particles-js"></div>
             <nav id="myHeader">
                 <div class="row">
                     <ul class="col span-1-of-2 navbar js--main-nav">
                         <li><a href="#about-section"><ion-icon name="newspaper-outline" class="icon-big nav-icons"></ion-icon></a></li>
-                        <li><a href="#exp-section"><ion-icon name="construct-outline" class="icon-big nav-icons"></ion-icon></a></li>
+                        <li><a href="#skills-section"><ion-icon name="construct-outline" class="icon-big nav-icons"></ion-icon></a></li>
                    
                         <li><a href="https://twitter.com/Tiz_slick"><ion-icon name="logo-twitter" class="icon-big nav-icons"></ion-icon></a></li>
                         <li><a href="https://github.com/Slick-RaphaEl"><ion-icon name="logo-github" class="icon-big nav-icons"></ion-icon></a></li>
@@ -60,45 +52,45 @@
             <div class="overview-box" id="about-section">
                 <h2>an overview </h2>
                 <p class="text">
-                    Hi!, I'm Raphael Otuya, a self-driven full-stack web developer. I graduated from FEDERAL GOVERNMENT COLLEGE.<br>I am a team player, highly driven and also passionate about building tools to help as much people as possible.
+                    Hi!, I'm Raphael Otuya, a self-driven full-stack web developer.<br>I am a team player, highly driven and also passionate about building tools to help as much people as possible.
                 </p>
 
                 <div class="row skills-section" id="skills-section">
                     <h2>my skills</h2>
-                    <div class="skills-container">
+                    <div data-inviewport="scale-in" class="skills-container ">
                         <ul class="col span-1-of-2 skills-box">
-                            <li>
+                            <li class="skills-list">
                                 <ion-icon name="logo-html5" class="icon-big"></ion-icon>
                                 <span class="skills-label">HTML</span>
                             </li>
 
-                            <li>
+                            <li class="skills-list">
                                 <ion-icon name="logo-css3" class="icon-big"></ion-icon>                                
                                 <span class="skills-label">CSS</span>
                             </li>
 
-                            <li>
+                            <li class="skills-list">
                                 <ion-icon name="logo-javascript" class="icon-big"></ion-icon>
                                 <span class="skills-label">JAVASCRIPT</span>
                             </li>
 
-                            <li>
+                            <li class="skills-list">
                                 <ion-icon name="logo-react" class="icon-big"></ion-icon>
                                 <span class="skills-label">REACT JS</span>
                             </li>
 
-                            <li>
+                            <li class="skills-list">
                                 <ion-icon name="logo-docker" class="icon-big"></ion-icon>
                                 <span class="skills-label">Docker</span>
                             </li>
 
-                            <li>
+                            <li class="skills-list">
                                 <img alt="nextjs-logo" src="https://dl.dropboxusercontent.com/s/xz0vejngihe04kg/nextjs-.png?dl=0" class="skills-logo">
                                 <span class="skills-label">NEXT JS</span>
                             </li>
 
                             
-                            <li>
+                            <li class="skills-list">
                                 <img alt="ejs-logo" src="https://dl.dropboxusercontent.com/s/l6c460gneukxoc0/postgress-icon.jpg?dl=0" class="skills-logo">
                                 <span class="skills-label">POSTGRESQL</span>
                             </li>
@@ -107,39 +99,39 @@
 
                         <ul class="col span-1-of-2 skills-box">
 
-                            <li>
+                            <li class="skills-list">
                                 <img alt="ejs-logo" src="https://dl.dropboxusercontent.com/s/bao38ri0gppep7j/flutter-logo.jpg?dl=0" class="skills-logo">
                                 <span class="skills-label">Flutter</span>
                             </li>
 
-                            <li>
+                            <li class="skills-list">
                                 <ion-icon name="logo-firebase" class="icon-big"></ion-icon>
                                 <span class="skills-label">FIREBASE</span>
                             </li>
 
 
-                            <li>
+                            <li class="skills-list">
                                 <ion-icon name="logo-nodejs" class="icon-big"></ion-icon>
                                 <span class="skills-label">NODE JS</span>
                             </li>
 
-                            <li>
+                            <li class="skills-list">
                                 <img alt="ejs-logo" src="https://dl.dropboxusercontent.com/s/m2u0u3wmrjp1hwl/ejs-logo.png?dl=0" class="skills-logo">
                                 <span class="skills-label">EJS</span>
                             </li>
 
 
-                            <li>
+                            <li class="skills-list">
                                 <ion-icon name="git-merge-outline" class="icon-big"></ion-icon>
                                 <span class="skills-label">GIT</span>
                             </li>
 
-                            <li>
+                            <li class="skills-list">
                                 <ion-icon name="search-outline" class="icon-big"></ion-icon>
                                 <span class="skills-label">SEO</span>
                             </li>
 
-                            <li>
+                            <li class="skills-list">
                                 <img alt="ejs-logo" src="https://dl.dropboxusercontent.com/s/4opv7elhzqis61n/mongodb-icon.jpg?dl=0" class="skills-logo">
                                 <span class="skills-label">MONGO DB</span>
                             </li>
@@ -183,11 +175,27 @@
                         <h3>chop beta</h3>
 
                         <p class="project-description">
-                            Chop beta is an only food market place built with Ejs, Node js, Firebase. 
+                            Chop beta is an online food market place built with Ejs, Node js, Firebase. 
                             It is CRUD compliant and built in a restful state.
                         </p>
 
                         <a href="https://chop-beta.herokuapp.com/" class="btn btn-full" id="project-link">Visit Website</a>
+                    </div>
+                </div>
+
+                <div class="project-card clearfix">
+                    <div class="col span-1-of-3">
+                        <img alt="project-photo" src="https://dl.dropboxusercontent.com/s/dk5ynm41h420see/olympics-tracker.png?dl=0" class="project-photo">
+                    </div>
+
+                    <div class="col span-2-of-3 project-details">
+                        <h3>AFCON news tracker</h3>
+
+                        <p class="project-description">
+                           This website retrieves the latest news reagarding the 2022 African Cup of Nations. it is built with Nextjs and an API.
+                        </p>
+
+                        <a href="https://olympics-info-tracker.vercel.app/" class="btn btn-full" id="project-link">Visit website</a>
                     </div>
                 </div>
 
@@ -204,22 +212,6 @@
                         </p>
 
                         <a href="https://next-js-google-clone-one.vercel.app/" class="btn btn-full" id="project-link">Visit website</a>
-                    </div>
-                </div>
-
-                <div class="project-card clearfix">
-                    <div class="col span-1-of-3">
-                        <img alt="project-photo" src="https://dl.dropboxusercontent.com/s/dk5ynm41h420see/olympics-tracker.png?dl=0" class="project-photo">
-                    </div>
-
-                    <div class="col span-2-of-3 project-details">
-                        <h3>Nigeria Olympics tracker</h3>
-
-                        <p class="project-description">
-                           This website accumulates information regarding Nigerian news and happenings during the last Olympics games held in Japan. it is built with Nextjs and an API.
-                        </p>
-
-                        <a href="https://olympics-info-tracker.vercel.app/" class="btn btn-full" id="project-link">Visit website</a>
                     </div>
                 </div>
 
@@ -261,10 +253,9 @@
         </section>
 
         <section id="quotes-section" class="clearfix">
-            <div id="particles-js"></div>
             <div class="quotes-container">
                 <h2>some quotes i find interesting</h2>
-                    <div class="slidercontainer">  
+                    <div  data-inviewport="fade-rotate" class="slidercontainer">  
                         <div class="showSlide fade">  
                             <p>
                             Not everything that is faced can be changed but nothing can be changed until it is faced<br> 
@@ -300,7 +291,7 @@
             <div class="video-box">
                 <h3 class="">Some Random Programming Videos</h3>
                 <div class="write-container">
-                    <iframe width="100%" height="370px" class="youtubeVideo"></iframe>
+                    <iframe width="100%" height="370px" title="random youtube video" class="youtubeVideo"></iframe>
                 </div>
             </div>
 
@@ -344,7 +335,7 @@
                 </div>
                 <div class="col span-1-of-2">
                     <ul class="social-links">
-                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="https://slicktech.hashnode.dev/">Blog</a></li>
                         <li><a href="https://github.com/Slick-RaphaEl"><i class="ion-social-github"></i></a></li>
                         <li><a href="https://twitter.com/Tiz_slick"><i class="ion-social-twitter"></i></a></li>
                         <li><a href="https://www.linkedin.com/mwlite/in/raphael-otuya-446244144"><i class="ion-social-linkedin"></i></a></li>
